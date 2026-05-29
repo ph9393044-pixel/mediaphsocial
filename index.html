@@ -18,20 +18,34 @@
         }
 
         body{
-            font-family:Arial, Helvetica, sans-serif;
-            background:#050505;
-            color:white;
-        }
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#0f1117;
+
+    color:white;
+
+}
 
         header{
-            position:fixed;
-            width:100%;
-            top:0;
-            background:rgba(0,0,0,0.9);
-            padding:20px;
-            z-index:1000;
-            border-bottom:1px solid #ffd000;
-        }
+
+    position:fixed;
+
+    width:100%;
+
+    top:0;
+
+    padding:20px;
+
+    z-index:1000;
+
+    background:rgba(0,0,0,0.4);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,255,255,0.1);
+
+}
 
         nav{
             display:flex;
@@ -50,24 +64,46 @@
             color:#ffd000;
         }
 
-        section{
+        section{section{
+
+    padding:120px 30px;
+    text-align:center;
+
+    animation:aparecer 1s ease;
+
+}
             padding:120px 30px;
             text-align:center;
         }
 
-        .hero{
-            min-height:100vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            flex-direction:column;
+        ..hero{
 
-            background:
-            linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)),
-            radial-gradient(circle at top, #2a2a2a, #050505);
-        }
+    min-height:100vh;
 
-        .hero h1{
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    flex-direction:column;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.8),
+    rgba(0,0,0,0.95)),
+
+    url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+        .hero h1{letter-spacing:4px;
+animation:titulo 3s infinite alternate;
             font-size:80px;
             color:#ffd000;
             text-shadow:0 0 20px #ffd000;
@@ -185,7 +221,7 @@
 
         .pacotes{
 
-            background:#0b0b0b;
+            background:#1f2937;
 
         }
 
@@ -243,7 +279,7 @@
 
         .contato{
 
-            background:#050505;
+            background:#111827;
 
         }
 
@@ -291,8 +327,167 @@
 
             transform:scale(1.1);
 
-        }
+        }@keyframes aparecer{
 
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }.card:hover{
+
+    transform:
+    translateY(-15px)
+    scale(1.03);
+
+    border:1px solid #ffd000;
+
+    box-shadow:
+    0 0 20px rgba(255,208,0,0.3),
+    0 0 40px rgba(255,208,0,0.2);
+<a href="https://wa.me/5519998752011"
+class="whatsapp"
+target="_blank">
+
+💬
+.whatsapp{
+
+    position:fixed;
+
+    bottom:25px;
+    right:25px;
+
+    width:75px;
+    height:75px;
+
+    background:#25d366;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    text-decoration:none;
+
+    font-size:38px;
+
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+
+    animation:zap 1.5s infinite;
+
+}
+
+@keyframes zap{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.12);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+</a>
+}
+
+}
+.numeros{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+    background:#0a0a0a;
+
+}
+
+.numero-box{
+
+    background:#111;
+
+    padding:40px;
+
+    width:280px;
+
+    border-radius:20px;
+
+    border:1px solid #2b2b2b;
+
+    transition:0.3s;
+
+}
+
+.numero-box:hover{
+
+    transform:translateY(-10px);
+
+    border:1px solid #ffd000;
+
+    box-shadow:
+    0 0 20px rgba(255,208,0,0.3);
+
+}
+
+.numero-box h2{
+
+    color:#ffd000;
+
+    font-size:55px;
+
+    margin-bottom:15px;
+
+    text-shadow:0 0 15px #ffd000;
+
+}
+
+.numero-box p{
+
+    color:#d1d5db;
+
+    font-size:20px;
+
+}@keyframes titulo{
+
+    from{
+
+        text-shadow:
+        0 0 10px #ffd000;
+
+    }
+
+    to{
+
+        text-shadow:
+        0 0 20px #ffd000,
+        0 0 40px #ffd000;
+
+    }
+
+}
     </style>
 
 </head>
@@ -438,7 +633,30 @@
         </div>
 
     </section>
+<section class="numeros">
 
+    <div class="numero-box">
+
+        <h2>+120</h2>
+        <p>Clientes Atendidos</p>
+
+    </div>
+
+    <div class="numero-box">
+
+        <h2>+340</h2>
+        <p>Projetos Finalizados</p>
+
+    </div>
+
+    <div class="numero-box">
+
+        <h2>24H</h2>
+        <p>Suporte e Atendimento</p>
+
+    </div>
+
+</section>
     <section class="sobre" id="sobre">
 
         <h2>Sobre a MediaPhSocial ⚡</h2>
